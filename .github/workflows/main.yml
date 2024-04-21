@@ -1,0 +1,14 @@
+name: Run Bash Script
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Bash Script
+        run: |
+          bash setup.sh
